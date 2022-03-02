@@ -1,6 +1,7 @@
 
 import { ADD_TODO } from "../types/todoTypes";
-import { DELETE_TODO} from '../types/todoTypes'
+import { DELETE_TODO} from '../types/todoTypes';
+import { UPDATE_TODO} from '../types/todoTypes';
 
 const initialState = [
   {
@@ -30,6 +31,8 @@ const todosReducer = (state = initialState, action) => {
       
     case DELETE_TODO:
       return state.filter(todo => todo.id !== action.payload)
+    case UPDATE_TODO:
+      return state.map(todo => todo.id === action.payload.id ? {...todo,...action.payload.obj} : todo )
     default: {
       return state;
     }

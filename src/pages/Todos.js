@@ -4,6 +4,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Badge from 'react-bootstrap/Badge';
 import { useSelector } from 'react-redux';
 import DeleteModal from '../components/DeleteModal';
+import { Link } from 'react-router-dom';
 
 
 function Todos(props) {
@@ -30,7 +31,12 @@ function Todos(props) {
                                         <i className="bi bi-eye-fill btn text-warning btn-lg" ></i>
                                     </div>
                                     <div>
-                                        <DeleteModal todo={todo}/>
+                                        <Link to={`/update-todo/${todo.id}`}>
+                                            <i className="bi bi-pencil-square btn text-info"></i>
+                                        </Link>
+                                    </div>
+                                    <div>
+                                        <DeleteModal todo={todo} />
                                     </div>
 
                                 </div>

@@ -7,6 +7,7 @@ import Todo from './pages/Todo';
 import TodoDetails from './pages/TodoDetails';
 import Collaborators from './pages/Collaborators';
 import NewCollaborator from './pages/NewCollaborator';
+import UpdateTodo from './pages/UpdateTodo';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/new-collaborator" component={NewCollaborator} />
         <Route path="/new-todo" component={Todo} />
         <Route path="/todos/:id" component={TodoDetails} />
+        <Route path="/update-todo/:id" component={UpdateTodo} />
       </Switch>
     </Router>
   );

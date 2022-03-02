@@ -31,16 +31,16 @@ function Todos(props) {
                                         <Link to={`/todos/${todo.id}`}>
                                             <i className="bi bi-eye-fill btn text-warning"></i>
                                         </Link>
-                                    </div>
-                                    <div>
+
+
                                         <Link to={`/update-todo/${todo.id}`}>
                                             <i className="bi bi-pencil-square btn text-info"></i>
                                         </Link>
-                                    </div>
-                                    <div>
-                                        <DeleteModal todo={todo} />
-                                    </div>
 
+
+                                        <DeleteModal todo={todo} />
+
+                                    </div>
                                 </div>
                                 <div>
                                     {collaborator

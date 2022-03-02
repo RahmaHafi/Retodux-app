@@ -51,7 +51,7 @@ function UpdateTodo(props) {
             }
   
           </Form.Select>
-          <div className='d-flex justify-content-center'>
+          <div className='d-flex justify-content-center mt-3'>
             <Button type="submit" variant="outline-warning">
               <i className="bi bi-plus-circle-fill text-worning me-2"></i>
               Add Todo</Button>

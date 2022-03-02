@@ -2,15 +2,17 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Badge from 'react-bootstrap/Badge';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import DeleteModal from '../components/DeleteModal';
 import { Link } from 'react-router-dom';
+import { toggleTodo } from '../redux/actions/todosActionCreator';
 
 
 function Todos(props) {
 
     const todos = useSelector(state => state.todos)
     const collaborators = useSelector(state => state.collaborators)
+    const dispatch = useDispatch()
 
 
     return (
@@ -24,7 +26,7 @@ function Todos(props) {
                             <ListGroup.Item key={todo.id} variant="warning" className=" justify-content-between align-items-center  ">
                                 <div className=" d-flex justify-content-between">
                                     <div>
-                                        <i className={`bi bi-file${todo.completed ? '-check' : ''}-fill btn text-warning btn-lg`} ></i>
+                                        <i className={`bi bi-file${todo.completed ? '-check' : ''}-fill btn text-warning btn-lg`}  onClick={()=>dispatch(toggleTodo(todo.id))}></i>
                                         <span>{todo.title}</span>
                                     </div>
                                     <div>

@@ -28,7 +28,9 @@ function Todos(props) {
                                         <span>{todo.title}</span>
                                     </div>
                                     <div>
-                                        <i className="bi bi-eye-fill btn text-warning btn-lg" ></i>
+                                        <Link to={`/todos/${todo.id}`}>
+                                            <i className="bi bi-eye-fill btn text-warning"></i>
+                                        </Link>
                                     </div>
                                     <div>
                                         <Link to={`/update-todo/${todo.id}`}>

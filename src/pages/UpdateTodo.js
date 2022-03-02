@@ -28,7 +28,6 @@ function UpdateTodo(props) {
         }
   
       }
-    
   
     return (
       <Container>

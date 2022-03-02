@@ -3,8 +3,7 @@ import Container from 'react-bootstrap/Container';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Badge from 'react-bootstrap/Badge';
 import { useSelector } from 'react-redux';
-// import DeleteModal from '../components/DeleteModal';
-
+import DeleteModal from '../components/DeleteModal';
 
 
 function Todos(props) {
@@ -30,6 +29,10 @@ function Todos(props) {
                                     <div>
                                         <i className="bi bi-eye-fill btn text-warning btn-lg" ></i>
                                     </div>
+                                    <div>
+                                        <DeleteModal todo={todo}/>
+                                    </div>
+
                                 </div>
                                 <div>
                                     {collaborator

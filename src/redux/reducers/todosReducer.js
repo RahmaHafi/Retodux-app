@@ -1,5 +1,6 @@
 
 import { ADD_TODO } from "../types/todoTypes";
+import { DELETE_TODO} from '../types/todoTypes'
 
 const initialState = [
   {
@@ -26,7 +27,9 @@ const todosReducer = (state = initialState, action) => {
         completed: false 
       }
       return [...state, todoToInsert]
-
+      
+    case DELETE_TODO:
+      return state.filter(todo => todo.id !== action.payload)
     default: {
       return state;
     }

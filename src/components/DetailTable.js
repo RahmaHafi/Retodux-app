@@ -1,8 +1,23 @@
-import React from 'react'
+import React from 'react';
+import Table from 'react-bootstrap/Table';
 
-function DetailTable() {
+function DetailTable({todo}) {
   return (
-    <div>DetailTable</div>
+  
+      <Table bordered hover>
+
+        <tbody>
+          <tr>
+            <td>Title</td>
+            <td>{todo.title}</td>
+          </tr>
+          <tr>
+            <td>Description</td>
+            <td>{todo.description}</td>
+          </tr>
+        </tbody>
+      </Table>
+    
   )
 }
 

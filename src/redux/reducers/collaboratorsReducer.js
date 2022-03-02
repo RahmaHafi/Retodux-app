@@ -18,14 +18,16 @@ const initialState = [
 ];
 const collaboratorsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_COLLABORATOR: {
-      return state + action.payload;
-    }
-    
-    default: {
-      return state;
-    }
+    case ADD_COLLABORATOR:
+     const newCollabToAdd={
+       ...action.payload,
+       id :Math.floor(Math.random()*10000).toString()
+     } 
+     return [...state,newCollabToAdd]
+    default:
+    return state;
   }
+  
 }
 
 export default collaboratorsReducer;

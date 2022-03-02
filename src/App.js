@@ -6,6 +6,7 @@ import Todos from './pages/Todos';
 import Todo from './pages/Todo';
 import TodoDetails from './pages/TodoDetails';
 import Collaborators from './pages/Collaborators';
+import NewCollaborator from './pages/NewCollaborator';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <NavbarTodo />
       <Switch>
         <Route exact path="/" component={Todos} />
-        <Route path="/colloaborators" component={Collaborators}></Route>
+        <Route path="/colloaborators" component={Collaborators}/>
+        <Route path="/new-collaborator" component={NewCollaborator} />
         <Route path="/new-todo" component={Todo} />
         <Route path="/todos/:id" component={TodoDetails} />
       </Switch>

@@ -25,7 +25,7 @@ function Collaborators() {
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control placeholder="Enter email"  value={email} onChange={(e)=> setEmail(e.target.value)}/>
             <Form.Text className="text-muted">
-              Filter collaborators by email or phone.
+              Filter collaborators by email.
             </Form.Text>
           </Form.Group>
         </div>
